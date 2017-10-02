@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Button
+                android:text="Start/Stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" android:layout_marginTop="143dp" android:id="@+id/startStop"
+                android:onClick="startStopRecording"/>
+        <Button
+                android:text="Stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_below="@+id/startStop"
+                android:layout_centerHorizontal="true" android:layout_marginTop="123dp" android:id="@+id/button2"
+                android:onClick="stopMoving"/>
+        <Button
+                android:text="&#94;"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_alignBottom="@+id/button2"
+                android:layout_centerHorizontal="true" android:layout_marginBottom="55dp" android:id="@+id/button3"
+                android:textSize="24sp" android:onClick="goFoward"/>
+        <Button
+                android:text="&#62;"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_alignTop="@+id/button2"
+                android:layout_toRightOf="@+id/button2" android:layout_toEndOf="@+id/button2"
+                android:id="@+id/button4" android:onClick="goRight" android:textSize="18sp" android:textStyle="bold"/>
+
+        <Button
+                android:text="V"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/button6" android:textStyle="bold" android:onClick="goBackwards"
+                android:layout_below="@+id/button2" android:layout_alignLeft="@+id/button2"
+                android:layout_alignStart="@+id/button2"/>
+        <Button
+                android:text="&#60;"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_alignTop="@+id/button2"
+                android:layout_toLeftOf="@+id/button2" android:layout_toStartOf="@+id/button2"
+                android:id="@+id/button7" android:textSize="18sp" android:textStyle="bold" android:onClick="goLeft"/>
+        <TextView
+                android:text="Stopped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:id="@+id/status" android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/movementDisplay" android:layout_alignStart="@+id/movementDisplay"/>
+        <TextView
+                android:text="Recording status:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_alignBottom="@+id/status"
+                android:layout_alignRight="@+id/startStop" android:layout_alignEnd="@+id/startStop"
+                android:layout_marginRight="50dp" android:layout_marginEnd="50dp" android:id="@+id/status_label"/>
+        <TextView
+                android:text="Movement:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp" android:id="@+id/movement_label"
+                android:layout_below="@+id/status_label" android:layout_alignRight="@+id/status_label"
+                android:layout_alignEnd="@+id/status_label" android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"/>
+        <TextView
+                android:text="Not moving"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movementDisplay" android:layout_alignBaseline="@+id/movement_label"
+                android:layout_alignBottom="@+id/movement_label" android:layout_toRightOf="@+id/movement_label"
+                android:layout_toEndOf="@+id/movement_label" android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"/>
+    </RelativeLayout>
+</LinearLayout>
