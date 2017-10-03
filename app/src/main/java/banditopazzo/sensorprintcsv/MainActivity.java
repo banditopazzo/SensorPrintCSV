@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void startStopRecording(View v){
         if (!running) {
             createWriter();
-            SM.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+            SM.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
             running = true;
             status.setText("Running");
         } else {
